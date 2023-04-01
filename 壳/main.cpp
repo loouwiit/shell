@@ -38,6 +38,7 @@ void Initialize()
 	EXE_Param[0] = '\0';
 
 	Read_Setting();
+	Sleep(100);
 }
 
 void Enedze()
