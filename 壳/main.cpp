@@ -133,7 +133,7 @@ bool CMD_Check(int& argc, char* argv[])
 void Run(int Start_Number)
 {
 	if (Start_Number < 0) for (int i = 0; i < EXE_Number; i++)
-		if (GetAsyncKeyState(EXE_Key[i])) Start_Number = i;
+		if (GetAsyncKeyState(EXE_Key[i]) & (1 << 15)) Start_Number = i;
 
 	if (Start_Number < 0) Start_Number = 0;
 	int param_Length = 0;
